@@ -1,0 +1,16 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false
+  }
+}

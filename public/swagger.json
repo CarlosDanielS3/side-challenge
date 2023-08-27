@@ -1,0 +1,119 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Properties": {
+				"properties": {
+					"id": {
+						"type": "number",
+						"format": "double"
+					},
+					"address": {
+						"type": "string"
+					},
+					"price": {
+						"type": "number",
+						"format": "double"
+					},
+					"bedrooms": {
+						"type": "number",
+						"format": "double"
+					},
+					"bathrooms": {
+						"type": "number",
+						"format": "double"
+					},
+					"type": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"required": [
+					"id",
+					"address",
+					"price",
+					"bedrooms",
+					"bathrooms",
+					"type"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "take-home-assignment-nodejs-simplyrets",
+		"version": "1.0.0",
+		"description": "Nodejs and SQL take-home assignment for interview candidates",
+		"license": {
+			"name": "UNLICENSED"
+		},
+		"contact": {
+			"name": "Side Inc."
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/properties": {
+			"get": {
+				"operationId": "List",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/Properties"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/properties/{id}": {
+			"get": {
+				"operationId": "GetOneById",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Properties"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
