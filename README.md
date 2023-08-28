@@ -27,8 +27,11 @@ All the routes are documented in swagger, you can check the routes on **<http://
 
 - Base repository: this strategy is about scalabilty, once we have the base repository we can just extends new repositories from it just infering the type of the entity. It can improve team time to implement new simples cruds, on complex queries we can just override the method that we want or if thats the case we also can improve the base repository to handle the context.
 - Architecture: Some of clean arch with Domain Driven Design was implemented, each folder specify some rules to the files be in there;
+  
  Application: The application layer is where the use cases of the system are implemented and where the business logic is executed. Also is responsible for taking input from the user or external systems, validating that input, and then using the domain layer to perform the necessary operations and translate the results of those operations into a format that can be understood by the user or external systems.
+ 
 Domain: Responsible for representing the business concepts and rules that govern a particular problem domain. The domain layer is where the core business logic of the system is implemented. Also responsible for defining the entities, value objects, and aggregates that make up the domain model. It is also responsible for defining the business rules that govern the behavior of those entities and objects.
+
 Infrastructure:  Is responsible for providing the technical details of the system, such as data storage, communication with external systems, and user interface. The infrastructure layer is where the implementation details of the system are located.
 
 ## ✨  Libraries
