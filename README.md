@@ -26,6 +26,7 @@ All the routes are documented in swagger, you can check the routes on **<http://
 ## ✨  Code decisions
 
 - Base repository: this strategy is about scalabilty, once we have the base repository we can just extends new repositories from it just infering the type of the entity. It can improve team time to implement new simples cruds, on complex queries we can just override the method that we want or if thats the case we also can improve the base repository to handle the context.
+  
 - Architecture: Some of clean arch with Domain Driven Design was implemented, each folder specify some rules to the files be in there;
   
  Application: The application layer is where the use cases of the system are implemented and where the business logic is executed. Also is responsible for taking input from the user or external systems, validating that input, and then using the domain layer to perform the necessary operations and translate the results of those operations into a format that can be understood by the user or external systems.
@@ -50,4 +51,3 @@ Infrastructure:  Is responsible for providing the technical details of the syste
 - Add an apm to monitor the application
 - Translate the logs to json
 - Add dockerfile to handle the application for container services (EKS, ECS)
--
